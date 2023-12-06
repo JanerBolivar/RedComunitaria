@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Comunitaria</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./img/Fondo1.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: auto;
+            opacity: 0.7; /* Ajusta la opacidad de la capa de la imagen (0.0 - 1.0) */
+        }
+
+        h1,
+        p,
+        .scroll-down {
+            z-index: 1; /* Asegura que el texto esté sobre la capa de la imagen */
+        }
+
+        /* Estilos para las tarjetas de servicios */
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Espaciado entre las tarjetas */
+            padding: 20px;
+            box-sizing: border-box;
+            max-width: 100%;
+        }
+
+        .service-box {
+            width: 300px; /* Ancho de las tarjetas */
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            .service-box {
+                width: calc(50% - 20px); /* Dos tarjetas por fila en pantallas más pequeñas */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .service-box {
+                width: 100%; /* Una tarjeta por fila en pantallas aún más pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>RED COMUNITARIA</h1>
+        <p>Más información</p>
+        <a href="#section2" class="scroll-down">Ver más</a>
+    </div>
+
+    <!--Seccion de los servicios prestados-->
+    <section id="section2">
+        <div class="services-container">
+            <div class="service-box">
+                <img src="./img/Correo.png" alt="Correo">
+                <h2>Correo</h2>
+                <p>El servicio de correo es un servicio en línea que, al igual que ocurre con el correo postal tradicional, nos permite enviar y recibir mensajes a través de un servicio de red a múltiples destinatarios. </p>
+                <a href="https://172.16.16.129/mail/">Saber mas</a>
+            </div>
+    
+            <div class="service-box">
+                <img src="./img/Biblioteca.png" alt="Biblioteca">
+                <h2>Biblioteca</h2>
+                <p>Las bibliotecas desempeñan una labor esencial en el fomento de la alfabetización y el aprendizaje, el establecimiento de las bases para el desarrollo y la custodia del patrimonio cultural y científico universal.</p>
+                <a href="http://172.16.17.14:8084/">Saber mas</a>
+            </div>
+    
+            <div class="service-box">
+                <img src="./img/Mensajeria.png" alt="Mensajería">
+                <h2>Mensajería instantánea</h2>
+                <p>El servicio de mensajería instantánea trabaja como forma de comunicación en tiempo real entre dos o más personas basada en texto.</p>
+                <a href="http://172.16.17.14:8083/">Saber mas</a>
+            </div>
+    
+            <div class="service-box">
+                <img src="./img/Video.png" alt="Video">
+                <h2>Servicio de video</h2>
+                <p>El servicio de video sirve para Realizar actividades con vídeos interactivos.</p>
+                <a href="http://172.16.17.14:8080/">Saber mas</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
