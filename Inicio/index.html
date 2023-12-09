@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <div class="position-relative">
+        <video id="miVideo" style="width: 100%; height: auto;" muted autoplay loop playsinline class="img-fluid">
+            <source src="Video/back.mp4" type="video/mp4">
+        </video>
+
+    </div>
+    <section class="text-center position-absolute"
+        style="text-align: center; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <img class="img-fluid" src="assets/img/Fondo1.png" style="vertical-align: middle; object-fit: contain;">
+    </section>
+    <div class="card"
+        style="position: relative; margin-top: 10%; margin-right: 20px; margin-left: 20px; background-color: rgba(255, 255, 255, 0.4); backdrop-filter: blur(5px); box-shadow: 0px 0px 20px;">
+        <div class="card-body">
+            <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-6 text-center">
+                <div class="col fadeInLeft delay-1">
+                    <img src="assets/img/Video.png" class="imagen img-fluid"
+                        style="border-radius: 50%; max-width: 100px;">
+                        <div>
+                            <h4>Video</h4>
+                        </div>
+                </div>
+                <div class="col fadeInLeft delay-2">
+                    <img src="assets/img/Biblioteca.png" class="imagen img-fluid"
+                        style="border-radius: 50%; max-width: 100px;">
+                        <div>
+                            <h4>Biblioteca</h4>
+                        </div>
+                </div>
+                <div class="col fadeInLeft delay-3">
+                    <img src="assets/img/Mensajeria.png" class="imagen img-fluid"
+                        style="border-radius: 50%; max-width: 100px;">
+                        <div>
+                            <h4>Mensajeria</h4>
+                        </div>
+                </div>
+                
+                <a href="https://172.16.17.233:4443/webmail/">
+                    <div class="col fadeInLeft delay-4">
+                        <img src="assets/img/Correo.png" class="imagen img-fluid"
+                            style="border-radius: 50%; max-width: 100px;">
+                            <div >
+                                <h4>Correo</h4>
+                            </div>
+                    </div>
+                </a>
+                <div class="col fadeInLeft delay-5">
+                    <img src="assets/img/Blog.jpg" class="imagen img-fluid"
+                        style="border-radius: 50%; max-width: 100px;">
+                        <div>
+                            <h4>blog</h4>
+                        </div>
+                </div>
+                <div class="col fadeInLeft delay-6">
+                    <img src="assets/img/Correo.png" class="imagen img-fluid"
+                        style="border-radius: 50%; max-width: 100px;">
+                        <div>
+                            <h4>VoIp</h4>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes borderAnimation {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.5);
+            }
+
+            100% {
+                box-shadow: 0 0 10px 2px rgba(0, 255, 0, 0.5);
+            }
+        }
+
+        #miVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+
+        /* Estilos para la clase 'imagen' */
+        .imagen {
+            border: 2px solid transparent;
+            transition: box-shadow 0.3s ease;
+            /* Transición suave */
+        }
+
+        /* Aplicación de la animación al pasar el mouse */
+        .imagen:hover {
+            animation: borderAnimation 0.3s forwards;
+        }
+
+        /* Definición de la animación fadeInLeft */
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Aplicar la animación a las columnas con diferentes retrasos */
+        .fadeInLeft {
+            opacity: 0;
+            animation: fadeInLeft 0.5s ease forwards;
+        }
+
+        /* Ajustar el retraso para cada columna */
+        .delay-1 {
+            animation-delay: 0.2s;
+            /* Retraso para la primera columna */
+        }
+
+        .delay-2 {
+            animation-delay: 0.6s;
+            /* Retraso para la segunda columna */
+        }
+
+        .delay-3 {
+            animation-delay: 1s;
+            /* Retraso para la tercera columna */
+        }
+
+        .delay-4 {
+            animation-delay: 1.2s;
+            /* Retraso para la cuarta columna */
+        }
+
+        .delay-5 {
+            animation-delay: 1.4s;
+            /* Retraso para la quinta columna */
+        }
+
+        .delay-6 {
+            animation-delay: 1.6s;
+            /* Retraso para la sexta columna */
+        }
+
+        /* ... Otros retrasos para más columnas */
+    </style>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
